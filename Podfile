@@ -6,6 +6,7 @@ target 'Bitcoin Private' do
   use_frameworks!
 
   # Pods for Bitcoin Private
+  pod 'BlueSocket'
 
   target 'Bitcoin PrivateTests' do
     inherit! :search_paths

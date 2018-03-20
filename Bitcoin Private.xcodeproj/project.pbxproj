@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B4EDA1EF2253BAA06A77A34 /* Pods_Bitcoin_PrivateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487EB66F234D616E2118540E /* Pods_Bitcoin_PrivateUITests.framework */; };
+		34C446C647E58308C7FD209C /* Pods_Bitcoin_PrivateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C357D4300F687DB61DB711E /* Pods_Bitcoin_PrivateTests.framework */; };
+		68DD837E17CE3D5F13016BAF /* Pods_Bitcoin_Private.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116FB648FCE5E3DB9320F7E2 /* Pods_Bitcoin_Private.framework */; };
 		EC367BAF205ABC37008FF479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC367BAE205ABC37008FF479 /* AppDelegate.swift */; };
 		EC367BB6205ABC37008FF479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC367BB5205ABC37008FF479 /* Assets.xcassets */; };
 		EC367BB9205ABC37008FF479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC367BB7205ABC37008FF479 /* LaunchScreen.storyboard */; };
@@ -67,6 +70,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048765FE1135CB0EA051713B /* Pods-Bitcoin Private.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Private.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Private/Pods-Bitcoin Private.release.xcconfig"; sourceTree = "<group>"; };
+		116FB648FCE5E3DB9320F7E2 /* Pods_Bitcoin_Private.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcoin_Private.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		487EB66F234D616E2118540E /* Pods_Bitcoin_PrivateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcoin_PrivateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5101255E7B427D8B1DD2BEF6 /* Pods-Bitcoin Private.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Private.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Private/Pods-Bitcoin Private.debug.xcconfig"; sourceTree = "<group>"; };
+		5C357D4300F687DB61DB711E /* Pods_Bitcoin_PrivateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcoin_PrivateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5912E117BE5FAE641FE203 /* Pods-Bitcoin PrivateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin PrivateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin PrivateUITests/Pods-Bitcoin PrivateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A54698BC856DC1A9C8EB9B82 /* Pods-Bitcoin PrivateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin PrivateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin PrivateUITests/Pods-Bitcoin PrivateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6848D66DA3D83280137B95A /* Pods-Bitcoin PrivateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin PrivateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin PrivateTests/Pods-Bitcoin PrivateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E822F6A85355B0DE924565B4 /* Pods-Bitcoin PrivateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin PrivateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin PrivateTests/Pods-Bitcoin PrivateTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC367BAB205ABC37008FF479 /* Bitcoin Private.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin Private.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC367BAE205ABC37008FF479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC367BB5205ABC37008FF479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68DD837E17CE3D5F13016BAF /* Pods_Bitcoin_Private.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C446C647E58308C7FD209C /* Pods_Bitcoin_PrivateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,12 +148,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4EDA1EF2253BAA06A77A34 /* Pods_Bitcoin_PrivateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14A9774065ACBADBB2C256DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				116FB648FCE5E3DB9320F7E2 /* Pods_Bitcoin_Private.framework */,
+				5C357D4300F687DB61DB711E /* Pods_Bitcoin_PrivateTests.framework */,
+				487EB66F234D616E2118540E /* Pods_Bitcoin_PrivateUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A44DD386B775864C034319E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5101255E7B427D8B1DD2BEF6 /* Pods-Bitcoin Private.debug.xcconfig */,
+				048765FE1135CB0EA051713B /* Pods-Bitcoin Private.release.xcconfig */,
+				B6848D66DA3D83280137B95A /* Pods-Bitcoin PrivateTests.debug.xcconfig */,
+				E822F6A85355B0DE924565B4 /* Pods-Bitcoin PrivateTests.release.xcconfig */,
+				A54698BC856DC1A9C8EB9B82 /* Pods-Bitcoin PrivateUITests.debug.xcconfig */,
+				7C5912E117BE5FAE641FE203 /* Pods-Bitcoin PrivateUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EC367BA2205ABC37008FF479 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +185,8 @@
 				EC367BC2205ABC37008FF479 /* Bitcoin PrivateTests */,
 				EC367BCD205ABC37008FF479 /* Bitcoin PrivateUITests */,
 				EC367BAC205ABC37008FF479 /* Products */,
+				A44DD386B775864C034319E1 /* Pods */,
+				14A9774065ACBADBB2C256DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -279,9 +319,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC367BD3205ABC38008FF479 /* Build configuration list for PBXNativeTarget "Bitcoin Private" */;
 			buildPhases = (
+				E53046AB3593F1A7ED085C37 /* [CP] Check Pods Manifest.lock */,
 				EC367BA7205ABC37008FF479 /* Sources */,
 				EC367BA8205ABC37008FF479 /* Frameworks */,
 				EC367BA9205ABC37008FF479 /* Resources */,
+				97BE262F448AC4F9336005A9 /* [CP] Embed Pods Frameworks */,
+				93609D8CE3BE796E4ABA98CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,9 +339,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC367BD6205ABC38008FF479 /* Build configuration list for PBXNativeTarget "Bitcoin PrivateTests" */;
 			buildPhases = (
+				57D4CD08157105549BF2D0E4 /* [CP] Check Pods Manifest.lock */,
 				EC367BBB205ABC37008FF479 /* Sources */,
 				EC367BBC205ABC37008FF479 /* Frameworks */,
 				EC367BBD205ABC37008FF479 /* Resources */,
+				49B7DF8E48D33DED455E406A /* [CP] Embed Pods Frameworks */,
+				83E0953A004BC4015A9D03B4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,9 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC367BD9205ABC38008FF479 /* Build configuration list for PBXNativeTarget "Bitcoin PrivateUITests" */;
 			buildPhases = (
+				2F95E5B229FB242F85AC7A04 /* [CP] Check Pods Manifest.lock */,
 				EC367BC6205ABC37008FF479 /* Sources */,
 				EC367BC7205ABC37008FF479 /* Frameworks */,
 				EC367BC8205ABC37008FF479 /* Resources */,
+				C42834B611E5D08F809612A0 /* [CP] Embed Pods Frameworks */,
+				555885E84F9D2296D83B8176 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -413,6 +462,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F95E5B229FB242F85AC7A04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitcoin PrivateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49B7DF8E48D33DED455E406A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin PrivateTests/Pods-Bitcoin PrivateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		555885E84F9D2296D83B8176 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin PrivateUITests/Pods-Bitcoin PrivateUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57D4CD08157105549BF2D0E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitcoin PrivateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83E0953A004BC4015A9D03B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin PrivateTests/Pods-Bitcoin PrivateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93609D8CE3BE796E4ABA98CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin Private/Pods-Bitcoin Private-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97BE262F448AC4F9336005A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin Private/Pods-Bitcoin Private-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BlueSocket/Socket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin Private/Pods-Bitcoin Private-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C42834B611E5D08F809612A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin PrivateUITests/Pods-Bitcoin PrivateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E53046AB3593F1A7ED085C37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitcoin Private-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC367BA7205ABC37008FF479 /* Sources */ = {
@@ -596,6 +795,7 @@
 		};
 		EC367BD4205ABC38008FF479 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5101255E7B427D8B1DD2BEF6 /* Pods-Bitcoin Private.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,6 +811,7 @@
 		};
 		EC367BD5205ABC38008FF479 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048765FE1135CB0EA051713B /* Pods-Bitcoin Private.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,6 +827,7 @@
 		};
 		EC367BD7205ABC38008FF479 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6848D66DA3D83280137B95A /* Pods-Bitcoin PrivateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -643,6 +845,7 @@
 		};
 		EC367BD8205ABC38008FF479 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E822F6A85355B0DE924565B4 /* Pods-Bitcoin PrivateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,6 +863,7 @@
 		};
 		EC367BDA205ABC38008FF479 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54698BC856DC1A9C8EB9B82 /* Pods-Bitcoin PrivateUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -676,6 +880,7 @@
 		};
 		EC367BDB205ABC38008FF479 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C5912E117BE5FAE641FE203 /* Pods-Bitcoin PrivateUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

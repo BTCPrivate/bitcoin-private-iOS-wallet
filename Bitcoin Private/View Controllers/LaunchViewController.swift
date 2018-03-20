@@ -6,6 +6,7 @@
 //  Copyright © 2018 Satraj Bambra. All rights reserved.
 //
 
+import Socket
 import UIKit
 
 class LaunchViewController: UIViewController {
@@ -51,6 +52,13 @@ class LaunchViewController: UIViewController {
         showButtons()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Just for testing.
+        testSocketConnection()
+    }
+    
     func setupView() {
         UIApplication.shared.statusBarStyle = .default
         
@@ -84,7 +92,65 @@ class LaunchViewController: UIViewController {
         
         navigationController?.pushViewController(walletViewController, animated: true)
     }
-}
+    
+    /*
+     * TODO : Remove this once testing is completed. This method verifies that our TCP connection to the BTCP socket server is valid.
+     */
+    func testSocketConnection() {
+        do {
+            let socket = try Socket.create(family: .inet6, type: .stream, proto: .tcp)
+            socket.readBufferSize = 1024*10
+            try socket.connect(to: "electrum.btcprivate.org", port: 5222)
+            
+            print("Socket is connected ", socket.isConnected)
+            
+            print("Checking remote connection closed", socket.remoteConnectionClosed)
+            
+            let dic:[String:Any] = [
+                "jsonrpc": "2.0",
+                "id": 1,
+                "method": "blockchain.address.subscribe",
+                "params": [
+                    "b1PKjricB6ncbATakGCDwu69kxM4R3dUGH4",
+                ]
+            ]
+            
+            let data = try JSONSerialization.data(withJSONObject: dic)
+            let jsonString = String(data: data, encoding: .utf8)
+            
+            try socket.write(from: jsonString!)
+
+            print("Wrote to socket:  '\(jsonString ?? "")'")
+            
+            var readData = Data()
+            let bytesRead = try socket.read(into: &readData)
+            
+            print("Checking remote connection closed", socket.remoteConnectionClosed)
+            
+            if bytesRead > 0 {
+                guard let response = NSString(data: readData, encoding: String.Encoding.utf8.rawValue) else {
+                    print("Error decoding response...")
+                    return
+                }
+                print("the response is", response)
+            } else {
+                print("No response from the server")
+            }
+            
+            print("Checking remote connection closed", socket.remoteConnectionClosed)
+            
+            socket.close()
+            
+            print("Socket is connected", socket.isConnected)
+        }
+        catch let error {
+            guard error is Socket.Error else {
+                print("Unexpected error...")
+                return
+            }
+        }
+    }
+ }
 
 extension LaunchViewController: AccountCreationDelegate {
     func createAccount(mnemonic: String) {
