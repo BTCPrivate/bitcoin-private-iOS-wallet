@@ -1,12 +1,12 @@
 PODS:
-  - BlueSocket (1.0.0)
+  - Socket.swift (2.2.0)
 
 DEPENDENCIES:
-  - BlueSocket
+  - Socket.swift
 
 SPEC CHECKSUMS:
-  BlueSocket: e3cd2bb08ec5c769299b148faad317038c5258b0
+  Socket.swift: 5fb2c79f327a061b68d33a946256b9fd7a1e1a41
 
-PODFILE CHECKSUM: ac666f5e429cf243aefcf360e611093165a3d4d5
+PODFILE CHECKSUM: 2c3e3dc3c0243d4369cf08082395bfa86f4adf36
 
 COCOAPODS: 1.3.1

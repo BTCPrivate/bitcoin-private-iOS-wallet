@@ -6,7 +6,7 @@
 //  Copyright © 2018 Satraj Bambra. All rights reserved.
 //
 
-import Socket
+import SocketSwift
 import UIKit
 
 class LaunchViewController: UIViewController {
@@ -56,7 +56,7 @@ class LaunchViewController: UIViewController {
         super.viewDidAppear(animated)
         
         // Just for testing.
-        testSocketConnection()
+        testSocketConnection(address: "b1A6cCtwsNGPeCvMsbo2xWDjgX2p229WyEv")
     }
     
     func setupView() {
@@ -96,61 +96,59 @@ class LaunchViewController: UIViewController {
     /*
      * TODO : Remove this once testing is completed. This method verifies that our TCP connection to the BTCP socket server is valid.
      */
-    func testSocketConnection() {
-        do {
-            let socket = try Socket.create(family: .inet6, type: .stream, proto: .tcp)
-            socket.readBufferSize = 1024*10
-            try socket.connect(to: "electrum.btcprivate.org", port: 5222)
+    func testSocketConnection(address: String) {
+        let socket = try! Socket(.inet)
+        let addr = try! socket.addresses(for: "electrum.btcprivate.org", port: 5222).first!
+        try! socket.connect(address: addr)
+        try! socket.startTls(TLS.Configuration(peer: "electrum.btcprivate.org"))
+        
+        // Get Balance
+        let balance = write(message: String.init(format: "{\"method\": \"blockchain.address.get_balance\", \"params\": [\"\(address)\"], \"id\": 1}\n"), socket: socket)
             
-            print("Socket is connected ", socket.isConnected)
-            
-            print("Checking remote connection closed", socket.remoteConnectionClosed)
-            
-            let dic:[String:Any] = [
-                "jsonrpc": "2.0",
-                "id": 1,
-                "method": "blockchain.address.subscribe",
-                "params": [
-                    "b1PKjricB6ncbATakGCDwu69kxM4R3dUGH4",
-                ]
-            ]
-            
-            let data = try JSONSerialization.data(withJSONObject: dic)
-            let jsonString = String(data: data, encoding: .utf8)
-            
-            try socket.write(from: jsonString!)
+        print("Balance:", balance)
+        
+        // Get Transaction List
+        let transactions = write(message: String.init(format: "{\"method\": \"blockchain.address.get_history\", \"params\": [\"\(address)\"], \"id\": 2}\n"), socket: socket)
 
-            print("Wrote to socket:  '\(jsonString ?? "")'")
-            
-            var readData = Data()
-            let bytesRead = try socket.read(into: &readData)
-            
-            print("Checking remote connection closed", socket.remoteConnectionClosed)
-            
-            if bytesRead > 0 {
-                guard let response = NSString(data: readData, encoding: String.Encoding.utf8.rawValue) else {
-                    print("Error decoding response...")
-                    return
-                }
-                print("the response is", response)
-            } else {
-                print("No response from the server")
-            }
-            
-            print("Checking remote connection closed", socket.remoteConnectionClosed)
-            
-            socket.close()
-            
-            print("Socket is connected", socket.isConnected)
+        print("Transactions:", transactions)
+        
+        // Get Transaction Hash
+        let transactionHash = write(message: "{\"method\": \"blockchain.transaction.get\", \"params\": [\"6be1a69777992aa8d78e37175ed3cc888d035d967a21e0aff3553e47aa5be2a8\"], \"id\": 3}\n", socket: socket)
+        
+        print(transactionHash)
+        
+        socket.close()
+    }
+    
+    func write(message: String, socket: Socket) -> String {
+        try! socket.write(message.bytes)
+        
+        var buffer = [UInt8](repeating: 0, count: 1024)
+        let _ = try! socket.read(&buffer, size: 1024)
+        
+        guard let response = buffer.string else {
+            return ""
         }
-        catch let error {
-            guard error is Socket.Error else {
-                print("Unexpected error...")
-                return
-            }
+        
+        return response
+    }
+}
+
+extension Dictionary {
+    var json: String {
+        let invalidJson = "Not a valid JSON"
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            return String(bytes: jsonData, encoding: String.Encoding.utf8) ?? invalidJson
+        } catch {
+            return invalidJson
         }
     }
- }
+    
+    func dict2json() -> String {
+        return json
+    }
+}
 
 extension LaunchViewController: AccountCreationDelegate {
     func createAccount(mnemonic: String) {
@@ -160,3 +158,16 @@ extension LaunchViewController: AccountCreationDelegate {
         }
     }
 }
+
+private extension String {
+    var bytes: [Byte] {
+        return [Byte](self.utf8)
+    }
+}
+
+private extension Array where Element == Byte {
+    var string: String? {
+        return String(bytes: self, encoding: .utf8)
+    }
+}
+
