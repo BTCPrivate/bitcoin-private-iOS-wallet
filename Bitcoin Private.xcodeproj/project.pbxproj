@@ -50,6 +50,7 @@
 		EC367C24205ABF52008FF479 /* PinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC367C1A205ABF52008FF479 /* PinView.xib */; };
 		EC367C28205ABFD4008FF479 /* UIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC367C26205ABFD4008FF479 /* UIColor+Gradient.swift */; };
 		EC367C29205ABFD4008FF479 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC367C27205ABFD4008FF479 /* UIView+Shake.swift */; };
+		EC38ED172067445D00ECF138 /* ElectrumRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38ED162067445D00ECF138 /* ElectrumRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		EC367C1A205ABF52008FF479 /* PinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinView.xib; sourceTree = "<group>"; };
 		EC367C26205ABFD4008FF479 /* UIColor+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Gradient.swift"; sourceTree = "<group>"; };
 		EC367C27205ABFD4008FF479 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		EC38ED162067445D00ECF138 /* ElectrumRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectrumRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 				EC367C07205ABF48008FF479 /* Constants.swift */,
 				EC367C09205ABF48008FF479 /* AppNavigationController.swift */,
 				EC367C0A205ABF48008FF479 /* NibLoader.swift */,
+				EC38ED162067445D00ECF138 /* ElectrumRequest.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -567,10 +570,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bitcoin Private/Pods-Bitcoin Private-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSONRPCKit/JSONRPCKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Socket.swift/SocketSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONRPCKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +634,7 @@
 				EC367C1E205ABF52008FF479 /* TransactionHistoryCell.swift in Sources */,
 				EC367C29205ABFD4008FF479 /* UIView+Shake.swift in Sources */,
 				EC367C20205ABF52008FF479 /* WalletCell.swift in Sources */,
+				EC38ED172067445D00ECF138 /* ElectrumRequest.swift in Sources */,
 				EC367C23205ABF52008FF479 /* PinView.swift in Sources */,
 				EC367BF7205ABD7F008FF479 /* VerificationViewController.swift in Sources */,
 				EC367BFC205ABD7F008FF479 /* ReceiveViewController.swift in Sources */,

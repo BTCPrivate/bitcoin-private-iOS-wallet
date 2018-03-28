@@ -6,6 +6,7 @@
 //  Copyright © 2018 Satraj Bambra. All rights reserved.
 //
 
+import JSONRPCKit
 import SocketSwift
 import UIKit
 
@@ -101,7 +102,7 @@ class LaunchViewController: UIViewController {
         let addr = try! socket.addresses(for: "electrum.btcprivate.org", port: 5222).first!
         try! socket.connect(address: addr)
         try! socket.startTls(TLS.Configuration(peer: "electrum.btcprivate.org"))
-        
+
         // Get Balance
         let balance = write(message: String.init(format: "{\"method\": \"blockchain.address.get_balance\", \"params\": [\"\(address)\"], \"id\": 1}\n"), socket: socket)
             

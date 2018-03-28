@@ -1,12 +1,18 @@
 PODS:
+  - JSONRPCKit (3.0.0):
+    - Result (~> 3.2.0)
+  - Result (3.2.4)
   - Socket.swift (2.2.0)
 
 DEPENDENCIES:
+  - JSONRPCKit
   - Socket.swift
 
 SPEC CHECKSUMS:
+  JSONRPCKit: 50e0dc5e7f873e87f81562feb8836b7d1974da6d
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   Socket.swift: 5fb2c79f327a061b68d33a946256b9fd7a1e1a41
 
-PODFILE CHECKSUM: 2c3e3dc3c0243d4369cf08082395bfa86f4adf36
+PODFILE CHECKSUM: 36e89b4d40395f29ee85fb5b9ccb3eda74146a40
 
 COCOAPODS: 1.3.1

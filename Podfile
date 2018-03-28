@@ -7,6 +7,7 @@ target 'Bitcoin Private' do
 
   # Pods for Bitcoin Private
   pod 'Socket.swift'
+  pod 'JSONRPCKit'
 
   target 'Bitcoin PrivateTests' do
     inherit! :search_paths
